@@ -30,7 +30,21 @@ public class LinkListImpl<T> {
 		head = node;
 		head.next = temp;
 	}
+	
+	public void append(T key) {
+		Node<T>node = new Node<>(key);
+		if(head == null) {
+			head = node;
+			return;
+		}
+		temp = head;
+		while(temp.next!=null) {
+			temp=temp.next;
+		}
+		temp.next=node;
+	}
 
+	
 	@Override
 	public String toString() {
 		return "LinkListImpl [head=" + head + " , temp=" + temp + ", tail=" + tail + "]";
