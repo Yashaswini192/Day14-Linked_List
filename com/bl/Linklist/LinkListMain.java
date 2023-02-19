@@ -16,8 +16,10 @@ public class LinkListMain {
 		
 		L1.append(56);		
 		L1.append(70);
-		System.out.println(L1);
+		//System.out.println(L1);
 		L1.insertBetween(30);
+		System.out.println("\n"+L1);
+		L1.pop(56);
 		System.out.println("\n"+L1);
 		
 		

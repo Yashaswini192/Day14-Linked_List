@@ -58,6 +58,14 @@ public class LinkListImpl<T> {
 	  temp.next = tail;
 	  }
 
+	  public void pop(T key) {
+		  Node<T>node = new Node<>(key);
+		  if(head != null) {
+		  temp = head;
+		  head = head.next;
+		  temp = null;
+		  }
+		  }
 	 
 	@Override
 	public String toString() {
