@@ -5,7 +5,7 @@ public class LinkListImpl<T> {
 	Node temp;
 	Node tail;
 	int count = 0;
-	
+
 
 	public void add(T key) {
 		Node<T>node = new Node<>(key);
@@ -14,13 +14,13 @@ public class LinkListImpl<T> {
 			return;
 		}
 		temp = head;
-		while(temp.next!=null) {
-			temp=temp.next;
+		while(temp.next != null) {
+			temp = temp.next;
 		}
-		temp.next=node;
-		
+		temp.next = node;
+
 	}
-	
+
 	public void insertAtStart(T key) {
 		Node<T>node = new Node<>(key);
 		if(head == null) {
@@ -32,7 +32,7 @@ public class LinkListImpl<T> {
 		head = node;
 		head.next = temp;
 	}
-	
+
 	public void append(T key) {
 		Node<T>node = new Node<>(key);
 		if(head == null) {
@@ -40,38 +40,47 @@ public class LinkListImpl<T> {
 			return;
 		}
 		temp = head;
-		while(temp.next!=null) {
-			temp=temp.next;
+		while(temp.next != null) {
+			temp = temp.next;
 		}
-		temp.next=node;
+		temp.next = node;
 	}
-		
-	  public void insertBetween(T key) { 
-		  Node<T>node = new Node<>(key);
-	  if(head != null) {
-		  head = temp;
-		 temp = head.next;
-		 head.next = node;
-		//temp = node ;
-		node.next = temp;
-	  }
-	  temp.next = tail;
-	  }
 
-	  public void pop(T key) {
-		  Node<T>node = new Node<>(key);
-		  if(head != null) {
-		  temp = head;
-		  head = head.next;
-		  temp = null;
-		  }
-		  }
-	 
+	public void insertBetween(T key) { 
+		Node<T>node = new Node<>(key);
+		if(head != null) {
+			head = temp;
+			temp = head.next;
+			head.next = node;
+			//temp = node ;
+			node.next = temp;
+		}
+		temp.next = tail;
+	}
+
+	public void pop(T key) {
+		Node<T>node = new Node<>(key);
+		if(head != null) {
+			temp = head;
+			head = head.next;
+			temp = null;
+		}
+	}
+
+
+	public void popLast(T key) {
+		Node<T>node = new Node<>(key); if(head != null)
+			if(head != null) {
+				temp.next = null;
+			}
+
+	}
+
 	@Override
 	public String toString() {
 		return "LinkListImpl [head=" + head + " , temp=" + temp + ", tail=" + tail + "]";
 	}
 
-	
-	
+
+
 }
