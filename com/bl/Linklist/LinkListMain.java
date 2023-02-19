@@ -25,8 +25,11 @@ public class LinkListMain {
 		//L1.pop(56);
 		//System.out.println("\n"+L1);
 
-		L1.popLast(70);
-		System.out.println("\n"+L1);
+		//L1.popLast(70);
+		//System.out.println("\n"+L1);
+
+		L1.searchNode(30);
+		System.out.println("\n"+L1.searchNode(30));
 
 	}
 }

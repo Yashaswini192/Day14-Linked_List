@@ -76,11 +76,23 @@ public class LinkListImpl<T> {
 
 	}
 
+	public Node<T> searchNode(T key) {
+		Node<T>temp = head;
+		Node<T>searchNode = null;
+		while(temp != null) {
+			if(temp.key.equals(key)) {
+				searchNode = temp;
+				break;
+			}
+			temp = temp.next;
+		}
+		return searchNode;
+	}
+	
+
 	@Override
 	public String toString() {
 		return "LinkListImpl [head=" + head + " , temp=" + temp + ", tail=" + tail + "]";
 	}
-
-
 
 }
